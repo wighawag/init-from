@@ -1,7 +1,7 @@
 {
-  "name": "zel",
+  "name": "init-from",
   "version": "0.1.0",
-  "description": "zel is small, and simple command-line tool that helps kickstart new projects.",
+  "description": "init-from is small, and simple command-line tool that helps kickstart new projects, based on zel",
   "main": "lib/index.js",
   "bin": "lib/index.js",
   "files": [
@@ -21,10 +21,14 @@
     ]
   },
   "keywords": [],
-  "author": "Vu Tran <vu@vu-tran.com>",
+  "contributors": [
+    "Vu Tran <vu@vu-tran.com>",
+    "Ronan Sandford <wighawag@gmail.com>"
+  ],
   "license": "MIT",
   "dependencies": {
     "chalk": "^2.1.0",
+    "dot": "^1.1.3",
     "gittar": "^0.1.0",
     "mri": "^1.1.0"
   },
