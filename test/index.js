@@ -5,9 +5,10 @@ const rimraf = require('rimraf').sync;
 const glob = require('glob').sync;
 const mkdir = require('mkdirp');
 const test = require('tape');
+const slash = require('slash');
 
 const repo = 'vutran/gitignore';
-const files = ['.gitignore', '.zel'];
+const files = ['.gitignore']; // , '.zel'
 
 const zel = join(__dirname, '../lib');
 const fix = join(__dirname, 'fixtures');
@@ -17,8 +18,10 @@ const isDir = str => fs.statSync(str).isDirectory();
 const tmpDir = _ => join(fix, `tmp-${Math.random()}`);
 
 function expand(dir) {
-	return glob(`${dir}/**`, { dot: true, nodir: true }).map(str => {
-		return str.replace(dir, '').substr(1); // leading '/'
+	return glob(`${slash(dir)}/**`, { dot: true, nodir: true }).map(str => {
+		return slash(str)
+			.replace(slash(dir), '')
+			.substr(1); // leading '/'
 	});
 }
 
