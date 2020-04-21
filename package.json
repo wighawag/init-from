@@ -28,6 +28,7 @@
   "license": "MIT",
   "dependencies": {
     "chalk": "^2.1.0",
+    "change-case": "^4.1.1",
     "dot": "^1.1.3",
     "gittar": "^0.1.0",
     "mri": "^1.1.0"
