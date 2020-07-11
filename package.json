@@ -1,6 +1,6 @@
 {
   "name": "init-from",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "init-from is small, and simple command-line tool that helps kickstart new projects, based on zel",
   "main": "lib/index.js",
   "bin": "lib/index.js",
